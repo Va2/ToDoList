@@ -1,5 +1,8 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Todo List</title>
         <link rel="stylesheet" href="styles.css">
     </head>
@@ -15,7 +18,7 @@
                 <li v-for="todo in todos" :class="{completed: todo.completed}" class="task" @click="toggleTodo(todo.id)" @dblclick="deleteTodo(todo.id)">{{todo.task}}</li>
             </ul>
         </template>
-        
+
         <template id="app-template">
             <div>
                 <form @submit.prevent="addTodo">
